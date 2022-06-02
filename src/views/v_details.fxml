@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorDetailsConsultation" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.DetailConsultationController">
+   <children>
+      <AnchorPane layoutX="75.0" layoutY="38.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="anchorDetails" layoutX="71.0" layoutY="103.0" prefHeight="179.0" prefWidth="538.0" style="-fx-background-color: #0d47a1;" visible="false">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedants">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtfPrenom" editable="false" layoutX="14.0" layoutY="47.0" />
+                  <TextField fx:id="txtfNom" editable="false" layoutX="309.0" layoutY="47.0" />
+                  <TextField fx:id="txtfTelephone" editable="false" layoutX="14.0" layoutY="131.0" />
+                  <TextField fx:id="txtfAntecedants" editable="false" layoutX="309.0" layoutY="131.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorTableViews" layoutX="71.0" layoutY="311.0" prefHeight="200.0" prefWidth="538.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <TableView fx:id="tblvDetailsPatient" layoutY="51.0" prefHeight="187.0" prefWidth="538.0">
+                    <columns>
+                      <TableColumn fx:id="tblcMedicament" prefWidth="244.0" style="-fx-background-color: #0d47a1;" text="Medicaments" />
+                      <TableColumn fx:id="tblcPosologie" prefWidth="293.0" style="-fx-background-color: #0d47a1;" text="Posologie" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text layoutX="38.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Du Patient">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cboCodePatient" layoutX="174.0" layoutY="22.0" prefHeight="29.0" prefWidth="150.0" />
+      <FontAwesomeIcon fill="#0d47a1" glyphName="SEARCH" layoutX="344.0" layoutY="45.0" onMouseClicked="#handleSearch" size="2em" />
+   </children>
+</AnchorPane>

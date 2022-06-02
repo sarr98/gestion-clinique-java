@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.InscriptionController">
+   <children>
+      <AnchorPane layoutX="14.0" prefHeight="436.0" prefWidth="712.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="502.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngtree-medical-industry-medical-technology-medical-ct-examination-png-image_41767.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="331.0" prefHeight="502.0" prefWidth="428.0" style="-fx-background-color: #26c6da;">
+               <children>
+                  <Text fill="WHITE" layoutX="108.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSCRIPTION">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="22.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom ">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="269.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="263.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antécédants">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="265.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Domicile">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="22.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="273.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtfNom" layoutX="19.0" layoutY="119.0" onKeyPressed="#validationNom" promptText="nom" />
+                  <TextField fx:id="txtfPrenom" layoutX="265.0" layoutY="119.0" onKeyPressed="#validationPrenom" prefHeight="25.0" prefWidth="149.0" promptText="prenom" />
+                  <TextField fx:id="txtfDomicile" layoutX="265.0" layoutY="284.0" onKeyPressed="#validationDomicile" promptText="domicile" />
+                  <TextField fx:id="txtfLogin" layoutX="19.0" layoutY="197.0" onKeyPressed="#validationLogin" promptText="login" />
+                  <PasswordField fx:id="txtfPassword" layoutX="265.0" layoutY="197.0" prefHeight="25.0" prefWidth="149.0" promptText="password" />
+                  <Button fx:id="btn_inscrire" layoutX="271.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#handleInscription" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #009688;" text="S'inscrire">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_annuler" layoutX="31.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#handleReset" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #01579b;" text="Annuler">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="txtError" fill="RED" layoutX="65.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tous les champs sont obligatoires" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cboAntecedant" layoutX="260.0" layoutY="362.0" prefHeight="25.0" prefWidth="149.0" />
+                  <TextField fx:id="txtfTelephone" layoutX="19.0" layoutY="362.0" onKeyPressed="#validationTelephone" promptText="telephone" />
+                  <Text fill="WHITE" layoutX="22.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtfEmail" layoutX="20.0" layoutY="284.0" promptText="code postal" />
+                  <Text fill="WHITE" layoutX="19.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Postal">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidateName" fill="#ff0e0e" layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un nom" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidatePrenom" fill="#ff0e0e" layoutX="260.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un prenom" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidateLogin" fill="#ff0e0e" layoutX="14.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un login" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidateCodePostal" fill="#ff0e0e" layoutX="13.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un login" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidateDomicile" fill="#ff0e0e" layoutX="257.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un domicile" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtfValidateTelephone" fill="#ff0e0e" layoutX="17.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrer un numero" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.MedecinController">
+   <children>
+      <AnchorPane layoutX="93.0" layoutY="70.0" prefHeight="492.0" prefWidth="682.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="703.0" prefWidth="192.0" style="-fx-background-color: #0d47a1;">
+               <children>
+                  <ImageView fitHeight="164.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/387561.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="deconnexion" layoutX="11.0" layoutY="412.0" mnemonicParsing="false" onMouseClicked="#handleDeconnexion" prefHeight="34.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="DECONNEXION" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" layoutX="20.0" layoutY="437.0" size="2em" />
+                  <Button layoutX="11.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#handleConsultation" prefHeight="34.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="CONSULTATION" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="11.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#handleDetails" prefHeight="34.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="VOIR DETAILS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="192.0" prefHeight="96.0" prefWidth="644.0" style="-fx-background-color: #0d47a1;">
+               <children>
+                  <Text fx:id="txtBienvenue" fill="WHITE" layoutX="88.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Dr ,">
+                     <font>
+                        <Font name="System Bold Italic" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorContent" layoutX="192.0" layoutY="96.0" prefHeight="608.0" prefWidth="644.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

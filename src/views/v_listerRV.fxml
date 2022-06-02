@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.ListerRVController">
+   <children>
+      <AnchorPane layoutX="100.0" layoutY="72.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tblvListeRV" layoutX="17.0" layoutY="104.0" prefHeight="348.0" prefWidth="472.0" style="-fx-background-color: white;">
+              <columns>
+                <TableColumn fx:id="tblcDate" prefWidth="95.0" style="-fx-background-color: #0d47a1;" text="DATE" />
+                <TableColumn fx:id="tblcHeure" prefWidth="99.0" style="-fx-background-color: #0d47a1;" text="HEURE" />
+                  <TableColumn fx:id="tblcType" prefWidth="121.0" style="-fx-background-color: #0d47a1;" text="TYPE DE RV" />
+                  <TableColumn fx:id="tblcEtat" prefWidth="195.0" style="-fx-background-color: #0d47a1;" text="ETAT" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="7.0" layoutY="16.0" prefHeight="69.0" prefWidth="492.0" style="-fx-background-color: #0d47a1;">
+               <children>
+                  <Text fill="WHITE" layoutX="36.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste de mes Rendez-Vous">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

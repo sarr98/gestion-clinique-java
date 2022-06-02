@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.FaireConsultationController">
+   <children>
+      <ComboBox fx:id="cboCodePatient" layoutX="164.0" layoutY="12.0" prefHeight="29.0" prefWidth="150.0" />
+      <Text layoutX="28.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Du Patient">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fill="#0d47a1" glyphName="SEARCH" layoutX="334.0" layoutY="35.0" onMouseClicked="#handleSearch" size="2em" />
+      <AnchorPane fx:id="anchorDetails" layoutX="65.0" layoutY="51.0" prefHeight="179.0" prefWidth="538.0" style="-fx-background-color: #0d47a1;" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="315.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="315.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedants">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtfPrenom" editable="false" layoutX="14.0" layoutY="47.0" />
+            <TextField fx:id="txtfNom" editable="false" layoutX="309.0" layoutY="47.0" />
+            <TextField fx:id="txtfTelephone" editable="false" layoutX="14.0" layoutY="131.0" />
+            <TextField fx:id="txtfAntecedants" editable="false" layoutX="309.0" layoutY="131.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorMedicaments" layoutX="65.0" layoutY="248.0" prefHeight="163.0" prefWidth="538.0" style="-fx-background-color: #0d47a1;" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="9.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicaments">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cboMedicaments" layoutX="14.0" layoutY="48.0" prefHeight="29.0" prefWidth="150.0" />
+            <ComboBox fx:id="cboPosologie" layoutX="374.0" layoutY="48.0" prefHeight="29.0" prefWidth="150.0" />
+            <Text fill="WHITE" layoutX="374.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posologie">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="65.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#handlePrescrire" prefHeight="31.0" prefWidth="426.0" style="-fx-background-color: #00c853;" text="PRESCRIRE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorRV" layoutX="65.0" layoutY="431.0" prefHeight="163.0" prefWidth="538.0" style="-fx-background-color: #0d47a1;" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="19.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dpDate" layoutX="80.0" layoutY="27.0" prefHeight="31.0" prefWidth="174.0" />
+            <Text fill="WHITE" layoutX="300.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heure">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cboHeure" layoutX="374.0" layoutY="27.0" prefHeight="31.0" prefWidth="150.0" />
+            <Button layoutX="80.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#handlePlanifier" prefHeight="31.0" prefWidth="426.0" style="-fx-background-color: #009688;" text="PLANIFIER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

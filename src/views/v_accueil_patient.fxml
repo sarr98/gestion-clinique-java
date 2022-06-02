@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="708.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controllers.AccueilPatientController">
+   <children>
+      <AnchorPane layoutX="149.0" layoutY="71.0" prefHeight="518.0" prefWidth="673.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="548.0" prefWidth="208.0" style="-fx-background-color: #0d47a1;">
+               <children>
+                  <Button fx:id="listerRV" layoutX="26.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#handleShowRV" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="VOIR MES RV" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deconnexion" layoutX="26.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#handleDeconnexion" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="DECONNEXION" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="26.0" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#handlePlanifierRV" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="PLANIFIER RV" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="annulerRV" layoutX="26.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#handleDeleteRV" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #311b92;" text="ANNULER RV" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fill="WHITE" glyphName="INSTAGRAM" layoutX="11.0" layoutY="523.0" size="3em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="TWITTER" layoutX="79.0" layoutY="523.0" size="3em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="FACEBOOK" layoutX="162.0" layoutY="523.0" size="3em" text="" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/706161.png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" layoutX="30.0" layoutY="399.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="MEDKIT" layoutX="29.0" layoutY="206.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="LIST" layoutX="30.0" layoutY="272.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" layoutX="32.0" layoutY="332.0" size="2em" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="207.0" prefHeight="94.0" prefWidth="503.0" style="-fx-background-color: #0d47a1;">
+               <children>
+                  <Text fx:id="txtfBienvenue" fill="WHITE" layoutX="26.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue ,">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorContent" layoutX="207.0" layoutY="94.0" prefHeight="456.0" prefWidth="503.0">
+               <children>
+                  <Text layoutX="105.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VEUILLEZ CHOISIR UN TYPE DE RV :">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cboTypeRV" layoutX="25.0" layoutY="84.0" prefHeight="31.0" prefWidth="189.0" promptText="TYPE" />
+                  <Button layoutX="280.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#handleConfirmation" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: #0d47a1;" text="CONFIRMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="txtfDate" layoutX="272.0" layoutY="176.0" prefHeight="31.0" prefWidth="174.0" visible="false" />
+                  <Text fx:id="date" layoutX="37.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="heure" layoutX="37.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEURE" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cboMedecin" layoutX="272.0" layoutY="304.0" prefHeight="31.0" prefWidth="174.0" promptText="Medecin Consultant" visible="false" />
+                  <Text fx:id="changerType" layoutX="37.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDECIN" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="planifier" layoutX="45.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlePlanifier" prefHeight="31.0" prefWidth="398.0" style="-fx-background-color: #0d47a1;" text="PLANIFIER" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="cboPrestation" layoutX="272.0" layoutY="304.0" prefHeight="31.0" prefWidth="174.0" promptText="Type de Prestation" visible="false" />
+                  <ComboBox fx:id="cboHeure" layoutX="272.0" layoutY="233.0" prefHeight="31.0" prefWidth="174.0" visible="false" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
